@@ -1,5 +1,6 @@
 package application;
 
+import control.ExchangeCommand;
 import java.awt.Dimension;
 import java.awt.PopupMenu;
 import javax.swing.JFrame;
@@ -9,6 +10,7 @@ public class Application extends JFrame{
     public static void main(String[] args) {
         new Application().setVisible(true);
     }
+    private ExchangeCommand exchangeCommand;
 
     public Application() {
         deployUI();
@@ -26,11 +28,11 @@ public class Application extends JFrame{
     }
 
     private void createCommands() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.exchangeCommand = new ExchangeCommand();
     }
 
     private PopupMenu components() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return null;
     }
     
 }
