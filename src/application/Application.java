@@ -8,6 +8,7 @@ import java.util.Currency;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import view.SQLiteCurrencyLoader;
 
 public class Application extends JFrame{
 
