@@ -4,7 +4,7 @@ import control.ExchangeCommand;
 import java.awt.Dimension;
 import java.awt.PopupMenu;
 import java.util.ArrayList;
-import java.util.Currency;
+import model.Currency;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -36,7 +36,7 @@ public class Application extends JFrame{
         this.exchangeCommand = new ExchangeCommand();
     }
 
-    private PopupMenu components() {
+    private JPanel components() {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         ArrayList<Currency> currencyList = new SQLiteCurrencyLoader().get();
