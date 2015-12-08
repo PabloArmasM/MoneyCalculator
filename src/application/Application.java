@@ -3,7 +3,11 @@ package application;
 import control.ExchangeCommand;
 import java.awt.Dimension;
 import java.awt.PopupMenu;
+import java.util.ArrayList;
+import java.util.Currency;
+import javax.swing.BoxLayout;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class Application extends JFrame{
 
@@ -32,7 +36,20 @@ public class Application extends JFrame{
     }
 
     private PopupMenu components() {
-        return null;
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        ArrayList<Currency> currencyList = new SQLiteCurrencyLoader().get();
+        panel.add(fromComponents(currencyList));
+        panel.add(toComponents(currencyList));
+        return panel;
+    }
+
+    private PopupMenu fromComponents(ArrayList<Currency> currencyList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private PopupMenu toComponents(ArrayList<Currency> currencyList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
