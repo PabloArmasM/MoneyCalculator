@@ -10,11 +10,10 @@ import view.MoneyDialog;
 
 class FromMoneyPanel extends JPanel implements MoneyDialog {
     private final JTextField textField;
-    private final PopupMenu comboBox;
+    private final JComboBox comboBox;
 
     public FromMoneyPanel(JComboBox fromOptions, JTextField textField) {
         this.textField = textField;
-        PopupMenu comboBox = null;
         this.comboBox = comboBox;
         this.textField.setHorizontalAlignment(JTextField.RIGHT);
         this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
