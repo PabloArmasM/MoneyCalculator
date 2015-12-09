@@ -7,6 +7,7 @@ import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import model.Currency;
 import javax.swing.BoxLayout;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -61,6 +62,12 @@ public class Application extends JFrame{
 
     private KeyListener doCommandOnType(String exchange) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    private JComboBox fromOptions(ArrayList <Currency> CurrencyList){
+        
+        return null;
+        
     }
     
 }
