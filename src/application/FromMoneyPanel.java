@@ -6,11 +6,8 @@ import javax.swing.JTextField;
 
 class FromMoneyPanel extends JPanel {
 
-    public FromMoneyPanel() {
-    }
-
-    FromMoneyPanel(JComboBox fromOptions, JTextField textField) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public FromMoneyPanel(JComboBox fromOptions, JTextField textField) {
+        
     }
 
 }
