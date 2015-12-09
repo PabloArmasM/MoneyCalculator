@@ -3,11 +3,13 @@ package application;
 import control.ExchangeCommand;
 import java.awt.Dimension;
 import java.awt.PopupMenu;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import model.Currency;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import view.SQLiteCurrencyLoader;
 
 public class Application extends JFrame{
@@ -16,6 +18,7 @@ public class Application extends JFrame{
         new Application().setVisible(true);
     }
     private ExchangeCommand exchangeCommand;
+    private JPanel fromMoneyPanel;
 
     public Application() {
         deployUI();
@@ -45,11 +48,18 @@ public class Application extends JFrame{
         return panel;
     }
 
-    private PopupMenu fromComponents(ArrayList<Currency> currencyList) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private JPanel fromComponents(ArrayList<Currency> currencyList) {
+        JTextField textField = new JTextField("0");
+        textField.addKeyListener(doCommandOnType("Exchange"));
+        this.fromMoneyPanel = new FromMoneyPanel(fromOptions(currencyList),textField);
+        return fromMoneyPanel;
     }
 
     private PopupMenu toComponents(ArrayList<Currency> currencyList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private KeyListener doCommandOnType(String exchange) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
