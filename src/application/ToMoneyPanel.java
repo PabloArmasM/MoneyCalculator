@@ -16,4 +16,8 @@ class ToMoneyPanel extends JFrame implements MoneyDisplay {
         this.add(textField);
     }
 
+    Object getTextField() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
