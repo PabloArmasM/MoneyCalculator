@@ -67,7 +67,7 @@ public class Application extends JFrame{
     }
 
     private KeyListener doCommandOnType(String exchange) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
     
     private JComboBox fromOptions(ArrayList <Currency> CurrencyList){
