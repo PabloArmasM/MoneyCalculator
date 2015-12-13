@@ -1,7 +1,8 @@
 package view;
 
 import model.Currency;
+import model.Money;
 
 public interface MoneyDialog {
-    Currency get();
+    Money get();
 }
