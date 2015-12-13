@@ -20,6 +20,7 @@ public class Application extends JFrame{
     }
     private ExchangeCommand exchangeCommand;
     private JPanel fromMoneyPanel;
+    private ToMoneyPanel toMoneyPanel;
 
     public Application() {
         deployUI();
@@ -56,8 +57,13 @@ public class Application extends JFrame{
         return fromMoneyPanel;
     }
 
-    private PopupMenu toComponents(ArrayList<Currency> currencyList) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private JPanel toComponents(ArrayList<Currency> currencyList) {
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
+        this.toMoneyPanel = new ToMoneyPanel();
+        panel.add(toMoneyPanel);
+        panel.add(toOptions(currencyList));
+        return panel;
     }
 
     private KeyListener doCommandOnType(String exchange) {
@@ -68,6 +74,10 @@ public class Application extends JFrame{
         
         return null;
         
+    }
+
+    private PopupMenu toOptions(ArrayList<Currency> currencyList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
