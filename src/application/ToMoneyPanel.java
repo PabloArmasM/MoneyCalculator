@@ -3,9 +3,10 @@ package application;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+import model.Money;
 import view.MoneyDisplay;
 
-class ToMoneyPanel extends JFrame implements MoneyDisplay {
+public class ToMoneyPanel extends JFrame implements MoneyDisplay {
     private final JTextField textField;
 
     public ToMoneyPanel() {
@@ -17,6 +18,11 @@ class ToMoneyPanel extends JFrame implements MoneyDisplay {
     }
 
     Object getTextField() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void show(Money result) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
