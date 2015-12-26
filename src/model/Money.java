@@ -9,4 +9,13 @@ public class Money {
         this.currency = currency;
     }
     
+    public double getAmount() {
+        return amount;
+    }
+
+    public Currency getCurrency() {
+        return currency;
+    }
+
+    
 }

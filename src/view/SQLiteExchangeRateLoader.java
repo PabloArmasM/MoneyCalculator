@@ -1,6 +1,6 @@
 package view;
 
-public class SQLiteExchangeRateLoader {
+public class SQLiteExchangeRateLoader implements ExchangeRateReader{
 
     public SQLiteExchangeRateLoader() {
     }
