@@ -3,6 +3,7 @@ package application;
 import control.ExchangeCommand;
 import java.awt.Dimension;
 import java.awt.PopupMenu;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
@@ -88,13 +89,20 @@ public class Application extends JFrame{
         };
     }
     
-    private JComboBox fromOptions(ArrayList <Currency> CurrencyList){
-        
-        return null;
+    private JComboBox fromOptions(ArrayList <Currency> currencyList){
+        JComboBox comboBox = new JComboBox();
+        for (Currency currency : currencyList) 
+            comboBox.addItem(currency.getCode());
+        comboBox.addActionListener(doCommandOnComboBox("Exchange"));
+        return comboBox;
         
     }
 
     private PopupMenu toOptions(ArrayList<Currency> currencyList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private ActionListener doCommandOnComboBox(String exchange) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
