@@ -99,7 +99,12 @@ public class Application extends JFrame{
     }
 
     private PopupMenu toOptions(ArrayList<Currency> currencyList) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        JComboBox comboBox = new JComboBox();
+        for (Currency currency : currencyList) 
+            comboBox.addItem(currency.getCode());
+        PopupMenu toCurrencyPanel = new ToCurrencyPanel(comboBox);
+        comboBox.addActionListener(doCommandOnComboBox("Exchange"));
+        return toCurrencyPanel;
     }
 
     private ActionListener doCommandOnComboBox(String exchange) {
