@@ -98,11 +98,11 @@ public class Application extends JFrame{
         
     }
 
-    private PopupMenu toOptions(ArrayList<Currency> currencyList) {
+    private ToCurrencyPanel toOptions(ArrayList<Currency> currencyList) {
         JComboBox comboBox = new JComboBox();
         for (Currency currency : currencyList) 
             comboBox.addItem(currency.getCode());
-        PopupMenu toCurrencyPanel = new ToCurrencyPanel(comboBox);
+        ToCurrencyPanel toCurrencyPanel = new ToCurrencyPanel(comboBox);
         comboBox.addActionListener(doCommandOnComboBox("Exchange"));
         return toCurrencyPanel;
     }
