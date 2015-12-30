@@ -2,7 +2,6 @@ package application;
 
 import control.ExchangeCommand;
 import java.awt.Dimension;
-import java.awt.PopupMenu;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -108,7 +107,6 @@ public class Application extends JFrame{
     }
 
     private ActionListener doCommandOnComboBox(String exchange) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
