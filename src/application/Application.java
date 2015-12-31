@@ -106,7 +106,25 @@ public class Application extends JFrame{
         return toCurrencyPanel;
     }
 
-    private ActionListener doCommandOnComboBox(String exchange) {
+    private KeyListener doCommandOnComboBox(String exchange) {
+        return new KeyListener() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                if(!fromMoneyPanel.getTextField().getText().equals(""))
+                    exchangeCommand.execute();
+                else 
+                    toMoneyPanel.getTextField().setText("");
+            }
+
+            @Override
+            public void keyTyped(KeyEvent e) {
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+            }
+
+        };
     }
     
 }
