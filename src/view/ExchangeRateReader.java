@@ -1,6 +1,6 @@
 package view;
 
-import java.sql.Date;
+import java.util.Date;
 import model.Currency;
 import model.ExchangeRate;
 
