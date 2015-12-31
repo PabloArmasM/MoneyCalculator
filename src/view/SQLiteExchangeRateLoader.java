@@ -1,7 +1,7 @@
 package view;
 
 import java.sql.Connection;
-import java.sql.Date;
+import java.util.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,7 +15,7 @@ public class SQLiteExchangeRateLoader implements ExchangeRateReader{
     }
 
     @Override
-    public ExchangeRate get(Date date, Currency from, Currency to) {
+    public ExchangeRate get(java.sql.Date date, Currency from, Currency to) {
         try {
             Class.forName("org.sqlite.JDBC");
             Connection connect = DriverManager.getConnection("jdbc:sqlite:RATES");

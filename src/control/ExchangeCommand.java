@@ -1,7 +1,7 @@
 package control;
 
 import view.CurrencyDialog;
-import java.sql.Date;
+import java.util.Date;
 import java.util.concurrent.Exchanger;
 import model.Currency;
 import model.ExchangeRate;
