@@ -11,12 +11,14 @@ import view.MoneyDisplay;
 import view.SQLiteExchangeRateLoader;
 
 public class ExchangeCommand implements Command {
-    private MoneyDialog fromMoneyDialog;
-    private CurrencyDialog toCurrencyDialog;
-    private MoneyDisplay toMoneyDisplay;
+    private final MoneyDialog fromMoneyDialog;
+    private final CurrencyDialog toCurrencyDialog;
+    private final MoneyDisplay toMoneyDisplay;
     
-    public ExchangeCommand (){
-        
+    public ExchangeCommand(MoneyDialog fromMoneyDialog, MoneyDisplay toMoneyDisplay, CurrencyDialog toCurrencyDialog) {
+        this.fromMoneyDialog = fromMoneyDialog;
+        this.toMoneyDisplay = toMoneyDisplay;
+        this.toCurrencyDialog = toCurrencyDialog;
     }
     
     @Override
@@ -27,5 +29,4 @@ public class ExchangeCommand implements Command {
         Money result = new Exchanger().exchange(money, exchangeRate);
         toMoneyDisplay.show(result);
     }
-
 }
