@@ -20,7 +20,7 @@ public class ExchangeCommand implements Command {
         this.toMoneyDisplay = toMoneyDisplay;
         this.toCurrencyDialog = toCurrencyDialog;
     }
-    
+
     @Override
     public void excecute() {
         Money money = fromMoneyDialog.get();
