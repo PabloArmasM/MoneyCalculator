@@ -2,6 +2,8 @@ package application;
 
 import control.ExchangeCommand;
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
@@ -106,24 +108,15 @@ public class Application extends JFrame{
         return toCurrencyPanel;
     }
 
-    private KeyListener doCommandOnComboBox(String exchange) {
-        return new KeyListener() {
+    private ActionListener doCommandOnComboBox(String exchange) {
+        return new ActionListener() {
             @Override
-            public void keyReleased(KeyEvent e) {
+            public void actionPerformed(ActionEvent e) {
                 if(!fromMoneyPanel.getTextField().getText().equals(""))
                     exchangeCommand.execute();
-                else 
+                 else 
                     toMoneyPanel.getTextField().setText("");
             }
-
-            @Override
-            public void keyTyped(KeyEvent e) {
-            }
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-            }
-
         };
     }
     

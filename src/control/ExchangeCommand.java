@@ -29,4 +29,8 @@ public class ExchangeCommand implements Command {
         Money result = new Exchanger().exchange(money, exchangeRate);
         toMoneyDisplay.show(result);
     }
+
+    public void execute() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

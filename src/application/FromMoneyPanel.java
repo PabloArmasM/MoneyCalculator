@@ -28,4 +28,8 @@ class FromMoneyPanel extends JPanel implements MoneyDialog {
                 new Currency(comboBox.getSelectedItem().toString()));
     }
 
+    Object getTextField() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
