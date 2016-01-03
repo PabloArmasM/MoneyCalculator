@@ -19,8 +19,9 @@ public class Application extends JFrame{
         new Application().setVisible(true);
     }
     private ExchangeCommand exchangeCommand;
-    private JPanel fromMoneyPanel;
+    private FromMoneyPanel fromMoneyPanel;
     private ToMoneyPanel toMoneyPanel;
+    private ToCurrencyPanel toCurrencyPanel;
 
     public Application() {
         deployUI();
@@ -38,7 +39,7 @@ public class Application extends JFrame{
     }
 
     private void createCommands() {
-        this.exchangeCommand = new ExchangeCommand();
+        this.exchangeCommand = new ExchangeCommand(fromMoneyPanel,toMoneyPanel,toCurrencyPanel);
     }
 
     private JPanel components() {
