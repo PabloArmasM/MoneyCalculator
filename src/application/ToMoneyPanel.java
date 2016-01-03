@@ -17,13 +17,14 @@ public class ToMoneyPanel extends JFrame implements MoneyDisplay {
         this.add(textField);
     }
 
-    Object getTextField() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public JTextField getTextField() {
+        return textField;
     }
 
+
     @Override
-    public void show(Money result) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void show(Money money) {
+        this.textField.setText(String.format("%.2f",money.getAmount()));
     }
 
 }
