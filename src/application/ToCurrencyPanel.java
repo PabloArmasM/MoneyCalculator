@@ -2,15 +2,15 @@ package application;
 
 import javax.swing.BoxLayout;
 import javax.swing.JComboBox;
-import javax.swing.JFrame;
+import javax.swing.JPanel;
 import model.Currency;
 import view.CurrencyDialog;
 
-class ToCurrencyPanel extends JFrame implements CurrencyDialog{
+class ToCurrencyPanel extends JPanel implements CurrencyDialog{
     
     private JComboBox to;
 
-    public ToCurrencyPanel(JComboBox comboBox) {
+    public ToCurrencyPanel(JComboBox to) {
         this.to = to;
         this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
         this.to.setSelectedIndex(2);
