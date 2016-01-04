@@ -22,7 +22,7 @@ public class ExchangeCommand implements Command {
     }
 
     @Override
-    public void excecute() {
+    public void  execute() {
         Money money = fromMoneyDialog.get();
         Currency currency = toCurrencyDialog.get();
         ExchangeRate exchangeRate = new SQLiteExchangeRateLoader().get(new Date(),money.getCurrency(), currency);
@@ -30,7 +30,4 @@ public class ExchangeCommand implements Command {
         toMoneyDisplay.show(result);
     }
 
-    public void execute() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
