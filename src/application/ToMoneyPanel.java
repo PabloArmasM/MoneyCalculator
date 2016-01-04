@@ -7,9 +7,9 @@ import model.Money;
 import view.MoneyDisplay;
 
 public class ToMoneyPanel extends JFrame implements MoneyDisplay {
-    private final JTextField textField;
+    private JTextField textField;
 
-    public ToMoneyPanel() {
+     public ToMoneyPanel() {
         this.textField = new JTextField("0");
         this.textField.setEditable(false);
         this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));

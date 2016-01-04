@@ -1,5 +1,6 @@
 package application;
 
+import control.Command;
 import control.ExchangeCommand;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
@@ -17,13 +18,14 @@ import view.SQLiteCurrencyLoader;
 
 public class Application extends JFrame{
 
-    public static void main(String[] args) {
-        new Application().setVisible(true);
-    }
-    private ExchangeCommand exchangeCommand;
+    private Command exchangeCommand;
     private FromMoneyPanel fromMoneyPanel;
     private ToMoneyPanel toMoneyPanel;
     private ToCurrencyPanel toCurrencyPanel;
+    
+    public static void main(String[] args) {
+        new Application().setVisible(true);
+    }
 
     public Application() {
         deployUI();
@@ -69,7 +71,24 @@ public class Application extends JFrame{
         return panel;
     }
 
-    private KeyListener doCommandOnType(String exchange) {
+    private JComboBox fromOptions(ArrayList<Currency> currencyList) {
+        JComboBox comboBox = new JComboBox();
+        for (Currency currency : currencyList) 
+            comboBox.addItem(currency.getCode());
+        comboBox.addActionListener(doCommandOnComboBox("Exchange"));
+        return comboBox;
+    }
+
+    private ToCurrencyPanel toOptions(ArrayList<Currency> currencyList) {
+        JComboBox comboBox = new JComboBox();
+        for (Currency currency : currencyList) 
+            comboBox.addItem(currency.getCode());
+        toCurrencyPanel = new ToCurrencyPanel(comboBox);
+        comboBox.addActionListener(doCommandOnComboBox("Exchange"));
+        return toCurrencyPanel;
+    }
+
+    private KeyListener doCommandOnType(final String command) {
         return new KeyListener() {
             @Override
             public void keyReleased(KeyEvent e) {
@@ -89,26 +108,8 @@ public class Application extends JFrame{
 
         };
     }
-    
-    private JComboBox fromOptions(ArrayList <Currency> currencyList){
-        JComboBox comboBox = new JComboBox();
-        for (Currency currency : currencyList) 
-            comboBox.addItem(currency.getCode());
-        comboBox.addActionListener(doCommandOnComboBox("Exchange"));
-        return comboBox;
-        
-    }
 
-    private ToCurrencyPanel toOptions(ArrayList<Currency> currencyList) {
-        JComboBox comboBox = new JComboBox();
-        for (Currency currency : currencyList) 
-            comboBox.addItem(currency.getCode());
-        ToCurrencyPanel toCurrencyPanel = new ToCurrencyPanel(comboBox);
-        comboBox.addActionListener(doCommandOnComboBox("Exchange"));
-        return toCurrencyPanel;
-    }
-
-    private ActionListener doCommandOnComboBox(String exchange) {
+    private ActionListener doCommandOnComboBox(final String command) {
         return new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

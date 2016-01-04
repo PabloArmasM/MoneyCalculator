@@ -8,11 +8,11 @@ import model.Currency;
 import model.Money;
 import view.MoneyDialog;
 
-class FromMoneyPanel extends JPanel implements MoneyDialog {
-    private final JTextField textField;
+public class FromMoneyPanel extends JPanel implements  MoneyDialog{
+    private JTextField textField;
     private JComboBox comboBox;
-
-    public FromMoneyPanel(JComboBox fromOptions, JTextField textField) {
+    
+    public FromMoneyPanel(JComboBox comboBox, JTextField textField) {
         this.textField = textField;
         this.comboBox = comboBox;
         this.textField.setHorizontalAlignment(JTextField.RIGHT);
