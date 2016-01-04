@@ -1,6 +1,5 @@
 package application;
 
-import java.awt.PopupMenu;
 import javax.swing.BoxLayout;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
@@ -28,8 +27,7 @@ class FromMoneyPanel extends JPanel implements MoneyDialog {
                 new Currency(comboBox.getSelectedItem().toString()));
     }
 
-    Object getTextField() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public JTextField getTextField() {
+        return textField;
     }
-
 }
