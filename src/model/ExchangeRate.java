@@ -12,12 +12,16 @@ public class ExchangeRate {
         this.rate = rate;
     }
 
-    public double getRate() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Currency getFrom() {
+        return from;
     }
 
     public Currency getTo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return to;
+    }
+
+    public float getRate() {
+        return rate;
     }
 
 }
