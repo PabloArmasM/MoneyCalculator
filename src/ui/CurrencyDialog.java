@@ -1,5 +1,5 @@
 
-package view;
+package ui;
 
 import model.Currency;
 

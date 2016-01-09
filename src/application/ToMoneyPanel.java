@@ -4,7 +4,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import model.Money;
-import view.MoneyDisplay;
+import ui.MoneyDisplay;
 
 public class ToMoneyPanel extends JPanel implements  MoneyDisplay{
     private JTextField textField;

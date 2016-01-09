@@ -1,5 +1,6 @@
-package view;
+package persistence;
 
+import persistence.ExchangeRateReader;
 import java.sql.Connection;
 import java.util.Date;
 import java.sql.DriverManager;

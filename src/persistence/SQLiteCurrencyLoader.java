@@ -1,5 +1,6 @@
-package view;
+package persistence;
 
+import persistence.CurrencyReader;
 import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;

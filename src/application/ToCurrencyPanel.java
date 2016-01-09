@@ -4,7 +4,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
 import model.Currency;
-import view.CurrencyDialog;
+import ui.CurrencyDialog;
 
 class ToCurrencyPanel extends JPanel implements CurrencyDialog{
     

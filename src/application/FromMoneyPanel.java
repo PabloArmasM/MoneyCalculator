@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import model.Currency;
 import model.Money;
-import view.MoneyDialog;
+import ui.MoneyDialog;
 
 public class FromMoneyPanel extends JPanel implements  MoneyDialog{
     private JTextField textField;

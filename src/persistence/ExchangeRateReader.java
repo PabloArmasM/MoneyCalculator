@@ -1,4 +1,4 @@
-package view;
+package persistence;
 
 import java.util.Date;
 import model.Currency;

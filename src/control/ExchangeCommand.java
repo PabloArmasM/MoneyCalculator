@@ -1,14 +1,14 @@
 package control;
 
-import view.CurrencyDialog;
+import ui.CurrencyDialog;
 import java.util.Date;
 import model.Currency;
 import model.ExchangeRate;
 import model.Money;
 import process.Exchanger;
-import view.MoneyDialog;
-import view.MoneyDisplay;
-import view.SQLiteExchangeRateLoader;
+import ui.MoneyDialog;
+import ui.MoneyDisplay;
+import persistence.SQLiteExchangeRateLoader;
 
 public class ExchangeCommand implements Command {
     private final MoneyDialog fromMoneyDialog;

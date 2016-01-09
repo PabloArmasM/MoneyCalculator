@@ -14,7 +14,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import view.SQLiteCurrencyLoader;
+import persistence.SQLiteCurrencyLoader;
 
 public class Application extends JFrame{
 
